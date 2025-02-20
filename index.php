@@ -2,7 +2,7 @@
 
 require 'functions.php';
 
-$header = ['Product', 'Price', 'Weight', 'Type of product', 'Image'];
+$header = ['Product111', 'Price', 'Weight', 'Type of product', 'Image'];
 
 $file = "product.csv";
 
