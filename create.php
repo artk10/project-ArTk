@@ -20,23 +20,45 @@ if (($_POST["product"] ?? '')
 ?>
 
 <html>
+    <head>
+        <style>
+            label {
+                width: 200px;
+                display: inline-block;
+            }
+            div {
+                padding-bottom: 2px;
+            }
+        </style>
+    </head>
     <body>
         <form method="post" enctype="multipart/form-data">
-            Product <input type="text" name="product">
-            Price <input type="text" name="price">
-            Weight <input type="text" name="weight">
-            <label>
-                Type of product
+            <div>
+                <label>Product</label>
+                <input type="text" name="product">
+            </div>
+            <div>
+                <label>Price</label>
+                <input type="text" name="price">
+            </div>
+            <div>
+                <label>Weight</label>
+                 <input type="text" name="weight">
+            </div>
+            <div>
+                <label>Type of product</label>
                 <select name="typeProduct">
                     <option value="Fruit">Fruit</option>
                     <option value="Vegetable">Vegetable</option>
                 </select>
-            </label>
-            <input type="file" name="image" />
+            </div>
+            <div>
+                <label>Photo</label>
+                <input type="file" name="image" />
+            </div>
             <br><br>
             <button type="submit" style="background-color: green; color: white;">Submit</button>
         </form>
         <a href="index.php"><button>Back to list</button></a>
-        <input type="text">
     </body>
 </html>
