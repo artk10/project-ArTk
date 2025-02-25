@@ -4,13 +4,15 @@ if (($_POST["product"] ?? '')
     && is_numeric($_POST["price"] ?? '')
     && is_numeric($_POST["weight"] ?? '')
     && ($_POST["typeProduct"] ?? '')
-    && ($_FILES["image"]["type"])) {
+    && ($_FILES["image"]["type"])
+    && is_numeric($_POST["article"] ?? '')) {
         if ($_FILES["image"]["type"] == "image/jpeg" && "image/png" && "image/jpg") {
         file_put_contents("product.csv", $_POST["product"] . ";"
             . $_POST["price"] . ";"
             . $_POST["weight"] . ";"
             . $_POST["typeProduct"] . ";"
-            . $_FILES["image"]["name"] . "\n" , FILE_APPEND);
+            . $_FILES["image"]["name"] . ";"
+            . $_POST["article"] . "\n" , FILE_APPEND);
         header("location: index.php");
     } else {
         echo "ERROR IMAGE TYPE";
@@ -33,10 +35,10 @@ if (($_POST["product"] ?? '')
                 </select>
             </label>
             <input type="file" name="image" />
+            Article <input type="text" name="article">
             <br><br>
             <button type="submit" style="background-color: green; color: white;">Submit</button>
         </form>
         <a href="index.php"><button>Back to list</button></a>
-        <input type="text">
     </body>
 </html>
