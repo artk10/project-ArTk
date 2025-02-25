@@ -2,7 +2,7 @@
 
 require 'functions.php';
 
-$header = ['Product', 'Price', 'Weight', 'Type of product', 'Image', 'Article'];
+$header = ['Product', 'Price', 'Weight', 'Type of product', 'Image'];
 
 $file = "product.csv";
 
@@ -41,7 +41,6 @@ $totalProduct = getTotalProduct($data);
                 <td style="text-align: center"><b><?php echo $header[2] ?></b></td>
                 <td style="text-align: center"><b><?php echo $header[3] ?></b></td>
                 <td style="text-align: center"><b><?php echo $header[4] ?></b></td>
-                <td style="text-align: center"><b><?php echo $header[5] ?></b></td>
             </tr>
             <?php foreach ($data as $row): ?>
                 <tr>
@@ -50,7 +49,6 @@ $totalProduct = getTotalProduct($data);
                     <td style="text-align: right"><?php echo $row[2] ?> kg</td>
                     <td style="text-align: center"><?php echo $row[3] ?></td>
                     <td style="text-align: center"><img src="images/<?php echo $row[4] ?>" width="50" /></td>
-                    <td style="text-align: center">N° <?php echo $row[5] ?></td>
                 </tr>
             <?php endforeach ?>
             <tr bgcolor="gray">
@@ -58,7 +56,6 @@ $totalProduct = getTotalProduct($data);
                 <td style="text-align: right"><i><?php echo $totalPrice ?> €</i></td>
                 <td style="text-align: right"><i><?php echo $totalWeight ?> kg</i></td>
                 <td style="text-align: center"><i><?php echo $totalProduct ?> positions</i></td>
-                <td></td>
                 <td></td>
             </tr>
         </table>
