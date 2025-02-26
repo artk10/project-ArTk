@@ -63,4 +63,7 @@ $totalProduct = getTotalProduct($data);
             <a href="index.php?page=<?php echo $i ?>&search=<?php echo $search ?>"><?php echo $i ?></a>
         <?php endfor ?>
     </body>
+    <br>
+    <br>
+    <a href="object_example.php"><button>Example</button></a>
 </html>
