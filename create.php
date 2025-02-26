@@ -47,11 +47,10 @@ if (($_POST["product"] ?? '')
             </div>
             <div>
                 <label>Type of product</label>
-                    <select name="typeProduct">
-                        <option value="Fruit">Fruit</option>
-                        <option value="Vegetable">Vegetable</option>
-                    </select>
-                </label>
+                <select name="typeProduct">
+                    <option value="Fruit">Fruit</option>
+                    <option value="Vegetable">Vegetable</option>
+                </select>
             </div>
             <div>
                 <label>Photo</label>

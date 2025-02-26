@@ -7,14 +7,14 @@ class Animal {
 }
 
 $nicole = new Animal();
-$nicole->animalType = "dog";
-$nicole->name = "Nicole";
-$nicole->age = 5;
+$nicole -> animalType = "dog";
+$nicole -> name = "Nicole";
+$nicole -> age = 5;
 
 $musya = new Animal();
-$musya->animalType = "cat";
-$musya->name = "Musya";
-$musya->age = 10;
+$musya -> animalType = "cat";
+$musya -> name = "Musya";
+$musya -> age = 10;
 ?>
 
 <html>
