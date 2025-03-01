@@ -44,11 +44,11 @@ $totalProduct = getTotalProduct($data);
             </tr>
             <?php foreach ($data as $product): ?>
                 <tr>
-                    <td style="text-align: left"><?php echo $product -> name ?></td>
-                    <td style="text-align: right"><?php echo $product -> price ?> €</td>
-                    <td style="text-align: right"><?php echo $product -> weight ?> kg</td>
-                    <td style="text-align: center"><?php echo $product -> typeProduct ?></td>
-                    <td style="text-align: center"><img src="images/<?php echo $product -> image ?>" width="50" /></td>
+                    <td style="text-align: left"><?php echo $product->name ?></td>
+                    <td style="text-align: right"><?php echo $product->price ?> €</td>
+                    <td style="text-align: right"><?php echo $product->weight ?> kg</td>
+                    <td style="text-align: center"><?php echo $product->typeProduct ?></td>
+                    <td style="text-align: center"><img src="images/<?php echo $product->image ?>" width="50" /></td>
                 </tr>
             <?php endforeach ?>
             <tr bgcolor="gray">

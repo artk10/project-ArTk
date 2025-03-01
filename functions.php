@@ -10,17 +10,17 @@ class Product {
 }
 
 $product = new Product();
-$product -> name = '';
-$product -> price = '';
-$product -> weight = '';
-$product -> typeProduct = '';
-$product -> image = '';
+$product->name = '';
+$product->price = '';
+$product->weight = '';
+$product->typeProduct = '';
+$product->image = '';
 
 function getMaxName($data, $header) {
     $maxLength = strlen($header[0]);
     foreach ($data as $product) {
-        if (strlen($product -> name) > $maxLength) {
-            $maxLength = strlen($product -> name);
+        if (strlen($product->name) > $maxLength) {
+            $maxLength = strlen($product->name);
         }
     }
     return $maxLength;
@@ -29,7 +29,7 @@ function getMaxName($data, $header) {
 function getSumPrice($data) {
     $sum = 0;
     foreach ($data as $product) {
-        $sum += $product -> price;
+        $sum += $product->price;
     }
     return $sum;
 }
@@ -37,7 +37,7 @@ function getSumPrice($data) {
 function getSumWeight($data) {
     $weight = 0;
     foreach ($data as $product) {
-        $weight += $product -> weight;
+        $weight += $product->weight;
     }
     return $weight;
 }
@@ -45,7 +45,7 @@ function getSumWeight($data) {
 function search($data, $search) {
     $newData = [];
     foreach ($data as $product) {
-        if (str_contains(strtoupper($product -> name), strtoupper($search))) {
+        if (str_contains(strtoupper($product->name), strtoupper($search))) {
             $newData[] = $product;
         }
     }
@@ -63,11 +63,11 @@ function getDataFromFile($file) {
     foreach ($fileName as $line) {
         $row = explode(";", $line);
         $product = new Product();
-        $product -> name = $row[0];
-        $product -> price = $row[1];
-        $product -> weight = $row[2];
-        $product -> typeProduct = $row[3];
-        $product -> image = $row[4];
+        $product->name = $row[0];
+        $product->price = $row[1];
+        $product->weight = $row[2];
+        $product->typeProduct = $row[3];
+        $product->image = $row[4];
         $array[] = $product;
     }
     return $array;
