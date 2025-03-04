@@ -65,6 +65,8 @@ $totalProduct = getTotalProduct($data);
         <?php for ($i = 1; $i <= $totalPages; $i++): ?>
             <a href="index.php?page=<?php echo $i ?>&search=<?php echo $search ?>"><?php echo $i ?></a>
         <?php endfor ?>
+        <br><br><br><br><br>
+        <span style="font-size: 24px;">Задание на наследование ➜</span> <a href="test.php"><button>Click here</button></a>
     </body>
     <br>
     <br>
