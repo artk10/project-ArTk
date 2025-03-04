@@ -4,13 +4,17 @@ if (($_POST["product"] ?? '')
     && is_numeric($_POST["price"] ?? '')
     && is_numeric($_POST["weight"] ?? '')
     && ($_POST["typeProduct"] ?? '')
-    && ($_FILES["image"]["type"])) {
+    && ($_FILES["image"]["type"])
+    && ($_POST["country"] ?? '')
+    && ($_POST["city"] ?? '')) {
         if ($_FILES["image"]["type"] == "image/jpeg" && "image/png" && "image/jpg") {
         file_put_contents("product.csv", $_POST["product"] . ";"
             . $_POST["price"] . ";"
             . $_POST["weight"] . ";"
             . $_POST["typeProduct"] . ";"
-            . $_FILES["image"]["name"] . "\n" , FILE_APPEND);
+            . $_FILES["image"]["name"] . ";"
+            . $_POST["country"] . ";"
+            . $_POST["city"] . "\n" , FILE_APPEND);
         header("location: index.php");
     } else {
         echo "ERROR IMAGE TYPE";
@@ -55,6 +59,11 @@ if (($_POST["product"] ?? '')
             <div>
                 <label>Photo</label>
                 <input type="file" name="image" />
+            </div>
+            <div>
+                <label>Location</label>
+                <input type="text" name="country" placeholder="Country">
+                <input type="text" name="city" placeholder="City">
             </div>
             <br><br>
             <button type="submit" style="background-color: green; color: white;">Submit</button>
