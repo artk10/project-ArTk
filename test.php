@@ -6,7 +6,7 @@ class Vehicule {
     public $year;
 
     public function getVehicule() {
-        echo 'Brand : ' . $this->brand . "\n"
+        return 'Brand : ' . $this->brand . "\n"
             . 'Model : ' . $this->model . "\n"
             . 'Year  : ' . $this->year . "\n";
     }
@@ -18,7 +18,7 @@ class Car extends Vehicule {
     public $motor;
 
     public function getVehicule() {
-        echo 'Brand : ' . $this->brand . "\n"
+        return 'Brand : ' . $this->brand . "\n"
             . 'Model : ' . $this->model . "\n"
             . 'Year  : ' . $this->year . "\n"
             . 'Doors : ' . $this->numberDoors . "\n"
@@ -32,7 +32,7 @@ class Bicycle extends Vehicule {
     public $numberSpeeds;
 
     public function getVehicule() {
-        echo 'Brand   : ' . $this->brand . "\n"
+        return 'Brand   : ' . $this->brand . "\n"
             . 'Model   : ' . $this->model . "\n"
             . 'Year    : ' . $this->year . "\n"
             . 'Type    : ' . $this->typeBike . "\n"
@@ -60,17 +60,17 @@ $canyon->numberSpeeds = 6;
     <body>
         <h1>Presentation vehicule</h1>
         <h2>Presentation of the car :</h2>
-        <p>Brand: <?php echo $mercedes->brand?></p>
-        <p>Model: <?php echo $mercedes->model?></p>
-        <p>Year: <?php echo $mercedes->year?></p>
-        <p>Doors: <?php echo $mercedes->numberDoors?></p>
-        <p>Motor: <?php echo $mercedes->motor?></p>
+        <p>Brand: <?php echo $mercedes->brand ?></p>
+        <p>Model: <?php echo $mercedes->model ?></p>
+        <p>Year: <?php echo $mercedes->year ?></p>
+        <p>Doors: <?php echo $mercedes->numberDoors ?></p>
+        <p>Motor: <?php echo $mercedes->motor ?></p>
         <h2>Presentation of the bicycle :</h2>
-        <p>Brand: <?php echo $canyon->brand?></p>
-        <p>Model: <?php echo $canyon->model?></p>
-        <p>Year: <?php echo $canyon->year?></p>
-        <p>Type: <?php echo $canyon->typeBike?></p>
-        <p>Speeds: <?php echo $canyon->numberSpeeds?></p>
+        <p>Brand: <?php echo $canyon->brand ?></p>
+        <p>Model: <?php echo $canyon->model ?></p>
+        <p>Year: <?php echo $canyon->year ?></p>
+        <p>Type: <?php echo $canyon->typeBike ?></p>
+        <p>Speeds: <?php echo $canyon->numberSpeeds ?></p>
     </body>
 </html>
 
