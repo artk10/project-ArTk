@@ -34,7 +34,7 @@ $totalProduct = getTotalProduct($data);
     <body>
         <a href="create.php"><button>Create new product</button></a>
         <br><br>
-        <table border="1" width="400px">
+        <table border="1" width="600px">
             <tr bgcolor="gray">
                 <td style="text-align: center"><b><?php echo $header[0] ?></b></td>
                 <td style="text-align: center"><b><?php echo $header[1] ?></b></td>
@@ -65,9 +65,5 @@ $totalProduct = getTotalProduct($data);
         <?php for ($i = 1; $i <= $totalPages; $i++): ?>
             <a href="index.php?page=<?php echo $i ?>&search=<?php echo $search ?>"><?php echo $i ?></a>
         <?php endfor ?>
-        <br><br><br><br><br>
-        <span style="font-size: 24px;">Задание на наследование ➜</span> <a href="test.php"><button>Click here</button></a>
     </body>
-    <br>
-    <br>
 </html>
