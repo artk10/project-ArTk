@@ -9,33 +9,38 @@ class Product {
     public $country;
     public $city;
 
+    public function __construct($name, $price, $weight, $typeProduct, $image, $country, $city) {
+        $this->name = $name;
+        $this->price = $price;
+        $this->weight = $weight;
+        $this->typeProduct = $typeProduct;
+        $this->image = $image;
+        $this->country = $country;
+        $this->city = $city;
+    }
+
+    public function __toString() {
+        return $this->name . ";"
+            . $this->price . ";"
+            . $this->weight . ";"
+            . $this->typeProduct . ";"
+            . $this->image . ";"
+            . $this->country . ";"
+            . $this->city . "\n";
+    }
+
     public function getLocation(): string {
         return $this->country . ', ' . $this->city;
     }
 }
 
-$product = new Product();
-$product->name = '';
-$product->price = '';
-$product->weight = '';
-$product->typeProduct = '';
-$product->image = '';
-$product->country = '';
-$product->city = '';
 
 function getDataFromFile($file) {
     $array = [];
     $fileName = file($file);
     foreach ($fileName as $line) {
         $row = explode(";", $line);
-        $product = new Product();
-        $product->name = $row[0];
-        $product->price = $row[1];
-        $product->weight = $row[2];
-        $product->typeProduct = $row[3];
-        $product->image = $row[4];
-        $product->country = $row[5];
-        $product->city = $row[6];
+        $product = new Product($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6]);
         $array[] = $product;
     }
     return $array;
