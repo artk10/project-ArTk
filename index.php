@@ -32,7 +32,10 @@ $totalProduct = getTotalProduct($data);
 
 <html>
     <body>
-        <a href="create.php"><button>Create new product</button></a>
+        <div style="display: flex; justify-content: space-between; width: 600px;">
+            <a href="create.php"><button>Create new product</button></a>
+            <a href="cart.php"><button>View Cart</button></a>
+        </div>
         <br><br>
         <table border="1" width="600px">
             <tr bgcolor="gray">
