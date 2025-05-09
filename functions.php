@@ -20,13 +20,7 @@ class Product {
     }
 
     public function __toString() {
-        return $this->name . ";"
-            . $this->price . ";"
-            . $this->weight . ";"
-            . $this->typeProduct . ";"
-            . $this->image . ";"
-            . $this->country . ";"
-            . $this->city . "\n";
+        return $this->name;
     }
 
     public function getLocation(): string {

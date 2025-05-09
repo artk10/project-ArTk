@@ -48,7 +48,7 @@ $totalProduct = getTotalProduct($data);
             </tr>
             <?php foreach ($data as $product): ?>
                 <tr>
-                    <td style="text-align: left"><?php echo $product->name ?></td>
+                    <td style="text-align: left"><?php echo $product ?></td>
                     <td style="text-align: right"><?php echo $product->price ?> €</td>
                     <td style="text-align: right"><?php echo $product->weight ?> kg</td>
                     <td style="text-align: center"><?php echo $product->typeProduct ?></td>
