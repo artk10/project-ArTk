@@ -2,7 +2,7 @@
 
 require 'functions.php';
 
-$header = ['Product', 'Price', 'Weight', 'Type of product', 'Image', 'Location', 'Delete product'];
+$header = ['Product', 'Price', 'Total Price', 'Quantity', 'Image', 'Delete product'];
 
 $file = "cart.csv";
 
@@ -20,7 +20,6 @@ $file = "cart.csv";
             <td style="text-align: center"><b><?php echo $header[3] ?></b></td>
             <td style="text-align: center"><b><?php echo $header[4] ?></b></td>
             <td style="text-align: center"><b><?php echo $header[5] ?></b></td>
-            <td style="text-align: center"><b><?php echo $header[6] ?></b></td>
         </tr>
         <tr>
             <td style="text-align: left">TEST</td>
@@ -29,14 +28,12 @@ $file = "cart.csv";
             <td style="text-align: center">TEST</td>
             <td style="text-align: center">TEST</td>
             <td style="text-align: center">TEST</td>
-            <td style="text-align: center"></td>
         </tr>
         <tr bgcolor="gray">
             <td style="text-align: left">Total</td>
-            <td style="text-align: right">600€</td>
-            <td style="text-align: right">600kg</td>
             <td></td>
-            <td></td>
+            <td style="text-align: right">1200€</td>
+            <td style="text-align: right">2</td>
             <td></td>
             <td></td>
         </tr>
